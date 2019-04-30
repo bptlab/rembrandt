@@ -5,13 +5,19 @@ The meta-repository holding the docs, configuration files and so on.
 ## Deployment
 
 1. Clone the repository
-    ```
-    git clone https://github.com/bptlab/rembrandt
-    cd rembrandt
+    ```console
+    foo@bar:~$ git clone https://github.com/bptlab/rembrandt
+    foo@bar:~$ cd rembrandt
     ```
 
 1. Deploy the service using docker compose / stack: 
-  ```docker-compose up``` or ```docker stack deploy -c docker-compose.yml rembrandt```.
+    ``````console
+    foo@bar:~$ docker-compose up
+    
+    OR
+    
+    foo@bar:~$ docker stack deploy -c docker-compose.yml rembrandt
+    ```
   
 ## Contributing
 
