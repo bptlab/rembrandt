@@ -1,0 +1,21 @@
+version: '3'
+services:
+    rembrandt-frontend:
+        image: bptlab/rembrandt-frontend:latest
+        ports:
+            - 8080:8080
+    rembrandt-backend:
+        image: bptlab/rembrandt-backend:latest
+        ports:
+            - 3000:3000
+        networks:
+            - rembrandt-network
+        environment:
+            - MONGO_HOST=mongo
+    mongo:
+        image: mongo:latest
+        networks:
+            - rembrandt-network
+networks:
+    rembrandt-network:
+        driver: overlay
