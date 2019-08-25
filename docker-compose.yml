@@ -1,7 +1,7 @@
 version: '3'
 services:
     rembrandt:
-        image: rembrandt:latest
+        image: bptlab/rembrandt:latest
         ports:
             - 3000:3000
         environment:
