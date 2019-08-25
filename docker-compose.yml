@@ -8,14 +8,7 @@ services:
         image: bptlab/rembrandt-backend:latest
         ports:
             - 3000:3000
-        networks:
-            - rembrandt-network
         environment:
             - MONGO_HOST=mongo
     mongo:
         image: mongo:latest
-        networks:
-            - rembrandt-network
-networks:
-    rembrandt-network:
-        driver: overlay
