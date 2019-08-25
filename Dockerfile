@@ -18,5 +18,6 @@ FROM node:alpine
 WORKDIR /usr/src/rembrandt
 COPY --from=builder /usr/src/rembrandt-backend/dist .
 COPY --from=builder /usr/src/rembrandt-frontend/dist public
-RUN npm install --production
+RUN mkdir dataExchange && \
+    npm install --production
 CMD npm run production
