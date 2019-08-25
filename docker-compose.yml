@@ -1,14 +1,12 @@
 version: '3'
 services:
-    rembrandt-frontend:
-        image: bptlab/rembrandt-frontend:latest
-        ports:
-            - 8080:80
-    rembrandt-backend:
-        image: bptlab/rembrandt-backend:latest
+    rembrandt:
+        image: rembrandt:latest
         ports:
             - 3000:3000
         environment:
             - MONGO_HOST=mongo
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
     mongo:
         image: mongo:latest
