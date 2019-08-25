@@ -1,6 +1,8 @@
 [submodule "rembrandt-frontend"]
 	path = rembrandt-frontend
 	url = https://github.com/bptlab/rembrandt-frontend
+	branch = master
 [submodule "rembrandt-backend"]
 	path = rembrandt-backend
 	url = https://github.com/bptlab/rembrandt-backend
+	branch = master
