@@ -8,5 +8,8 @@ services:
             - MONGO_HOST=mongo
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
+            - data-exchange:/usr/src/rembrandt/dataExchange
     mongo:
         image: mongo:latest
+volumes:
+    data-exchange:
